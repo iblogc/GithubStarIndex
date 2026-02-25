@@ -6,29 +6,25 @@
 
 ## 📑 Index
 {% for repo in repos -%}
-- [{{ repo.full_name }}](#{{ repo.full_name | lower | replace('/', '') | replace('.', '') }})
+- [[#{{ repo.full_name }}|{{ repo.full_name }}]]
 {%- endfor %}
 
 ---
 
 {% for repo in repos %}
-### {{ repo.full_name }}
-<a id="{{ repo.full_name | lower | replace('/', '') | replace('.', '') }}"></a>
+## {{ repo.full_name }}
 
-⭐ {{ "{:,}".format(repo.stars) }} · {{ repo.language or "Unknown" }} · {{ repo.updated_at }}  
-[GitHub]({{ repo.url }}){% if repo.homepage %} · [Site]({{ repo.homepage }}){% endif %}
+> [!info]
+> ⭐ {{ "{:,}".format(repo.stars) }} · {{ repo.language or "Unknown" }} · {{ repo.updated_at }}  
+> [GitHub]({{ repo.url }}){% if repo.homepage %} · [Website]({{ repo.homepage }}){% endif %}  
+> {% set ai_tags = repo.summary.tags or [] %}
+> {% set topics = repo.topics or [] %}
+> {% for t in ai_tags %}`#{{ t }}` {% endfor %}{% for t in topics %}`#{{ t }}` {% endfor %}
 
 > {{ repo.summary.zh | trim }}
 
-{% set ai_tags = repo.summary.tags or [] %}
-{% set topics = repo.topics or [] %}
-{% if ai_tags or topics %}
-{% for t in ai_tags[:5] %}`#{{ t }}` {% endfor %}
-{% for t in topics[:5] %}`#{{ t }}` {% endfor %}
-{% endif %}
-
 {% if repo.description %}
-<sub>{{ repo.description | trim }}</sub>
+> <sub>{{ repo.description | trim }}</sub>
 {% endif %}
 
 ---

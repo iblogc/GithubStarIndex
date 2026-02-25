@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-GitHub Stars 知识库同步脚本 (JSON + Template 版)
+GitHub Stars Index同步脚本 (JSON + Template 版)
 功能：
   1. 从 GitHub API 抓取用户 Star 的项目列表
   2. 增量获取 README 并调用 AI 生成摘要，存储至 JSON 数据集
@@ -315,7 +315,7 @@ class TemplateGenerator:
 
 
 def main():
-    log.info("GitHub Stars 知识库同步系统开始运行")
+    log.info("GitHub Stars Index同步系统开始运行")
     cfg = load_config()
 
     gh = GitHubClient(cfg["github"]["username"], cfg["github"].get("token"))

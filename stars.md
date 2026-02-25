@@ -1,4 +1,4 @@
-# ⭐ GitHub Stars 知识库
+# ⭐ GitHub Stars Index
 
 > 🤖 由 [GitHubStarIndex](https://github.com/iblogc/GithubStarIndex) 自动生成 · 最后更新：2026-02-25 06:38 UTC · 共 **2** 个项目
 
