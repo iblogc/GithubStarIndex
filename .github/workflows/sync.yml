@@ -22,6 +22,11 @@ on:
         options:
           - "false"
           - "true"
+      test_limit:
+        description: "测试模式：限制处理的项目数量（如填 5 则只处理 5 个新项目，留空不限制）"
+        required: false
+        default: ""
+        type: string
 
 permissions:
   contents: write   # 允许 Action 提交文件到本仓库
@@ -70,6 +75,7 @@ jobs:
           VAULT_SYNC_ENABLED: ${{ vars.VAULT_SYNC_ENABLED }}  # 是否启用 Vault 同步（true/false）
           VAULT_REPO: ${{ vars.VAULT_REPO }}           # Vault 仓库（owner/repo 格式）
           VAULT_FILE_PATH: ${{ vars.VAULT_FILE_PATH }} # stars.md 在 Vault 中的路径
+          TEST_LIMIT: ${{ github.event.inputs.test_limit }} # 手动触发时的测试限制量
         run: python scripts/sync_stars.py
 
       # ── 6. 提交变更到本仓库 ───────────────────────────────

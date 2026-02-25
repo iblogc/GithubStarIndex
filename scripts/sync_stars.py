@@ -88,6 +88,10 @@ def load_config() -> dict:
         vault["pat"] = os.environ["VAULT_PAT"]
     cfg["vault_sync"] = vault
 
+    # 测试限制（可选）
+    test_limit = os.environ.get("TEST_LIMIT", "")
+    cfg["test_limit"] = int(test_limit) if test_limit.isdigit() else None
+
     return cfg
 
 
@@ -337,6 +341,12 @@ def main():
         # 如果已存在且 stars 差别不大（或者你想要定期更新也可以在此加入逻辑）
         # 这里演示增量更新：如果 JSON 里没有，则处理
         if not existing:
+            # 检查测试限制
+            test_limit = cfg.get("test_limit")
+            if test_limit is not None and new_count >= test_limit:
+                log.info(f"⚠️ 已达到测试限制数量 ({test_limit})，停止处理新项目")
+                break
+
             log.info(f"[{i}/{len(all_repos)}] 正在处理新仓库: {full_name}")
             readme = gh.get_readme(full_name, cfg["ai"].get("max_readme_length", 4000))
             if not readme and not repo["description"]:
