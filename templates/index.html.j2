@@ -63,6 +63,10 @@
             padding: 4rem 2rem;
         }
 
+        @media (max-width: 768px) {
+            .container { padding: 2rem 1rem; }
+        }
+
         /* Header Enhancements */
         header {
             margin-bottom: 6rem;
@@ -76,8 +80,8 @@
 
         .title-area h1 {
             font-family: 'Bebas Neue', sans-serif;
-            font-size: clamp(4rem, 12vw, 10rem);
-            line-height: 0.8;
+            font-size: clamp(3.5rem, 15vw, 10rem);
+            line-height: 0.9;
             letter-spacing: -0.02em;
         }
 
@@ -193,11 +197,20 @@
         }
 
         @media (max-width: 900px) {
-            header { grid-template-columns: 1fr; text-align: left; }
+            header { 
+                grid-template-columns: 1fr; 
+                text-align: left; 
+                gap: 1.5rem;
+                margin-bottom: 3rem;
+                padding-bottom: 2rem;
+            }
             .header-stats, .stats-grid, .top-langs, .header-links, .status-badge { 
                 justify-content: flex-start; 
                 text-align: left; 
             }
+            .header-stats { gap: 1rem; }
+            .stats-grid { gap: 1rem; flex-wrap: wrap; }
+            .header-links { flex-wrap: wrap; gap: 0.8rem; }
         }
 
         /* Search Section */
@@ -212,10 +225,11 @@
             background: var(--bg);
             backdrop-filter: blur(20px);
             border: 1px solid var(--border);
-            padding: 0.5rem 2rem;
+            padding: 0 1.5rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            min-height: 60px;
         }
 
         .search-hint {
@@ -232,11 +246,16 @@
             border: none;
             color: var(--fg);
             width: 100%;
-            padding: 1.5rem 0;
-            font-size: 1.5rem;
+            padding: 1rem 0;
+            font-size: 1.2rem;
             font-family: 'Bebas Neue', sans-serif;
             letter-spacing: 0.05em;
             outline: none;
+        }
+
+        @media (max-width: 600px) {
+            .search-hint { display: none; }
+            #search-input { font-size: 1rem; }
         }
         
         #search-input::placeholder { color: var(--border); }
@@ -251,7 +270,7 @@
         .repo-card {
             background: var(--surface);
             border: 1px solid var(--border);
-            padding: 2.5rem;
+            padding: 2rem;
             display: flex;
             flex-direction: column;
             cursor: pointer;
@@ -263,6 +282,11 @@
             border-color: var(--fg);
             transform: translateY(-5px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        @media (max-width: 600px) {
+            .repo-card { padding: 1.5rem; }
+            .card-title { font-size: 1.8rem; }
         }
 
         .card-lang {
@@ -437,9 +461,34 @@
         }
 
         @media (max-width: 1100px) { .repo-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 600px) { 
+            .repo-grid { grid-template-columns: 1fr; gap: 1rem; } 
+            .container { padding-top: 2rem; }
+            header { margin-bottom: 2rem; }
+        }
         @media (max-width: 768px) { 
-            .modal-content { padding: 2rem; }
-            .modal-actions { grid-template-columns: 1fr; }
+            .modal { padding: 0.5rem; }
+            .modal-content { 
+                padding: 2rem 1.5rem; 
+                margin: auto;
+                width: 100%;
+                height: 100%;
+                max-height: 100vh;
+                border: none;
+                border-radius: 0;
+            }
+            .modal-actions { grid-template-columns: 1fr; gap: 0.8rem; }
+            .btn { padding: 1.2rem; font-size: 1.2rem; }
+            .modal-title { font-size: 2.2rem; margin-top: 2rem; }
+            .modal-close { top: 1rem; right: 1rem; padding: 0.5rem; z-index: 10;}
+            .modal-header-info { flex-direction: column; gap: 1rem; }
+            .modal-section { margin-bottom: 2rem; }
+        }
+
+        .modal-header-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
         }
 
         /* Footer */
@@ -559,7 +608,7 @@
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal()">[ ESC_CLOSE ]</button>
             
-            <div class="modal-section" style="display: flex; justify-content: space-between; align-items: flex-start;">
+            <div class="modal-section modal-header-info">
                 <div>
                     <h2 id="m-name" class="modal-title" style="margin-bottom: 0.5rem;"></h2>
                     <div id="m-stars" style="font-family: 'Space Mono', monospace; color: var(--accent); margin-bottom: 1.5rem; font-size: 1.2rem; font-weight: 700;"></div>

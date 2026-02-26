@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-02-25 19:41 UTC",
+  "last_updated": "2026-02-26 07:11 UTC",
   "repos": {
     "op7418/Document-illustrator-skill": {
       "metadata": {
@@ -7,7 +7,7 @@
         "name": "Document-illustrator-skill",
         "owner": "op7418",
         "description": "帮你从文档生成对应的多张配图，内置了歸藏精心探索的图片风格，支持 16:9 和 3:4 两种比例，方便发小红书以及推特。",
-        "stars": 253,
+        "stars": 257,
         "language": "Python",
         "url": "https://github.com/op7418/Document-illustrator-skill",
         "homepage": "",
@@ -40,6 +40,46 @@
       },
       "pushed_at": "2026-01-21",
       "updated_at": "2026-02-25"
+    },
+    "HKUDS/nanobot": {
+      "metadata": {
+        "full_name": "HKUDS/nanobot",
+        "name": "nanobot",
+        "owner": "HKUDS",
+        "description": "\"🐈 nanobot: The Ultra-Lightweight OpenClaw\"",
+        "stars": 25379,
+        "language": "Python",
+        "url": "https://github.com/HKUDS/nanobot",
+        "homepage": "",
+        "topics": [],
+        "updated_at": "2026-02-26"
+      },
+      "summary": {
+        "zh": "nanobot 是一款超轻量级个人 AI 助手，核心代码仅约 4000 行，体积比同类项目小 99%。支持多平台（Telegram、Discord、Slack 等）、多 LLM 提供商（OpenAI、Anthropic、DeepSeek 等）及 MCP 协议，具备智能记忆、任务调度、代码生成和实时分析能力，适合研究与生产部署。",
+        "en": "nanobot is an ultra-lightweight personal AI assistant with only ~4,000 lines of core code—99% smaller than alternatives. It supports multiple chat platforms (Telegram, Discord, Slack, etc.), LLM providers (OpenAI, Anthropic, DeepSeek, etc.), and MCP protocol, featuring intelligent memory, task scheduling, code generation, and real-time analysis for both research and production use.",
+        "tags_zh": [
+          "AI助手",
+          "轻量级",
+          "多平台支持",
+          "MCP协议",
+          "开源",
+          "Python",
+          "个人智能代理",
+          "研究友好"
+        ],
+        "tags_en": [
+          "AI assistant",
+          "lightweight",
+          "multi-platform",
+          "MCP",
+          "open-source",
+          "Python",
+          "personal agent",
+          "research-ready"
+        ]
+      },
+      "pushed_at": "2026-02-26",
+      "updated_at": "2026-02-26"
     }
   }
 }
