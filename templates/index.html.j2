@@ -652,7 +652,6 @@
         const I18N = {
             zh: {
                 search: "搜索关键字或标签...",
-                stars: "收藏数",
                 updated: "更新时间",
                 loading: "系统加载中...",
                 end: "已加载全部档案",
@@ -665,7 +664,6 @@
             },
             en: {
                 search: "SEARCH KEYWORDS OR TAGS...",
-                stars: "STARS",
                 updated: "UPDATED",
                 loading: "SYSTEM_LOADING...",
                 end: "END_OF_ARCHIVE",
@@ -752,7 +750,7 @@
         function openModal(item) {
             const texts = I18N[currentLang];
             document.getElementById('m-name').textContent = item.full_name;
-            document.getElementById('m-stars').textContent = `☆ ${texts.stars}: ${item.stars}`;
+            document.getElementById('m-stars').textContent = `☆ ${item.stars}`;
             document.getElementById('m-desc').textContent = item.description || (currentLang === 'zh' ? '暂无项目描述。' : 'No original description.');
             
             document.getElementById('l-desc').textContent = texts.orig_desc;
