@@ -1119,13 +1119,18 @@
         function removeTag(tag) { activeTags.delete(tag); applyFiltersAndSort(); }
 
         function applyFiltersAndSort() {
-            const query = searchInput.value.toLowerCase();
+            const rawQuery = searchInput.value.trim().toLowerCase();
+            const keywords = rawQuery ? rawQuery.split(/\s+/) : [];
             const texts = I18N[currentLang];
             
             filteredData = RAW_DATA.filter(item => {
-                const nameMatch = item.full_name.toLowerCase().includes(query);
-                const descMatch = (item.description || '').toLowerCase().includes(query);
-                const summaryMatch = (item.summary[currentLang] || '').toLowerCase().includes(query);
+                // Check if all keywords are matched (AND logic)
+                const searchMatch = keywords.length === 0 || keywords.every(kw => {
+                    const nameMatch = item.full_name.toLowerCase().includes(kw);
+                    const descMatch = (item.description || '').toLowerCase().includes(kw);
+                    const summaryMatch = (item.summary[currentLang] || '').toLowerCase().includes(kw);
+                    return nameMatch || descMatch || summaryMatch;
+                });
                 
                 const langMatch = !activeLanguage || item.language === activeLanguage;
                 
@@ -1135,7 +1140,7 @@
                 );
                 const tagMatch = activeTags.size === 0 || Array.from(activeTags).every(t => itemTags.has(t));
                 
-                return (nameMatch || descMatch || summaryMatch) && langMatch && tagMatch;
+                return searchMatch && langMatch && tagMatch;
             });
 
             // Sorting
