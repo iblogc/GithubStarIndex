@@ -1,1 +1,170 @@
-
+{
+  "last_updated": "2026-02-28 18:33 UTC",
+  "repos": {
+    "waoowaooAI/waoowaoo": {
+      "metadata": {
+        "full_name": "waoowaooAI/waoowaoo",
+        "name": "waoowaoo",
+        "owner": "waoowaooAI",
+        "description": "首家工业级全流程可控协作式专业AIagent影视生产平台，从短片到漫剧到真人级影视剧一站搞定，采用好莱坞专业制作团队思路，让你拥有虚拟制片场",
+        "stars": 3488,
+        "language": "TypeScript",
+        "url": "https://github.com/waoowaooAI/waoowaoo",
+        "homepage": "",
+        "topics": [],
+        "updated_at": "2026-02-28"
+      },
+      "summary": {
+        "zh": "waoowaoo AI 影视 Studio 是首家工业级全流程可控协作式专业AIagent影视生产平台，支持从小说文本自动生成分镜、角色、场景并制作成完整视频，涵盖短片到漫剧到真人级影视剧制作，采用好莱坞专业制作团队思路，提供虚拟制片场体验。",
+        "en": "waoowaoo AI Film Studio is the first industrial-grade, end-to-end controllable collaborative AI agent platform for professional film and TV production, supporting automatic generation of storyboards, characters, and scenes from novel text into complete videos, covering short films to web series to feature films, using Hollywood-level production workflows for virtual studio experience.",
+        "tags_zh": [
+          "AI智能体",
+          "影视制作",
+          "自动化视频生成"
+        ],
+        "tags_en": [
+          "AI 智能体",
+          "Automated Video Generation",
+          "Film Production"
+        ]
+      },
+      "pushed_at": "2026-02-28",
+      "updated_at": "2026-02-28"
+    },
+    "LifeArchiveProject/WeChatDataAnalysis": {
+      "metadata": {
+        "full_name": "LifeArchiveProject/WeChatDataAnalysis",
+        "name": "WeChatDataAnalysis",
+        "owner": "LifeArchiveProject",
+        "description": "微信4.x数据解密并生成年度总结，高仿微信，支持实时更新，导出聊天记录，朋友圈等大量便捷功能",
+        "stars": 380,
+        "language": "Python",
+        "url": "https://github.com/LifeArchiveProject/WeChatDataAnalysis",
+        "homepage": "",
+        "topics": [],
+        "updated_at": "2026-02-28"
+      },
+      "summary": {
+        "zh": "微信4.x数据解密与分析工具，支持聊天记录、朋友圈等数据可视化展示，生成年度总结报告，高仿微信界面，提供实时更新、搜索及导出功能，采用Python+Vue.js+SQLite技术栈。",
+        "en": "WeChat 4.x data decryption and analysis tool with chat history, Moments visualization, annual summary generation, WeChat-like UI, real-time updates, search, and export capabilities, built using Python, Vue.js, and SQLite.",
+        "tags_zh": [
+          "年度总结",
+          "微信数据解密",
+          "数据可视化"
+        ],
+        "tags_en": [
+          "Annual Summary",
+          "WeChat Data Decryption",
+          "数据可视化"
+        ]
+      },
+      "pushed_at": "2026-02-28",
+      "updated_at": "2026-02-28"
+    },
+    "op7418/Document-illustrator-skill": {
+      "metadata": {
+        "full_name": "op7418/Document-illustrator-skill",
+        "name": "Document-illustrator-skill",
+        "owner": "op7418",
+        "description": "帮你从文档生成对应的多张配图，内置了歸藏精心探索的图片风格，支持 16:9 和 3:4 两种比例，方便发小红书以及推特。",
+        "stars": 265,
+        "language": "Python",
+        "url": "https://github.com/op7418/Document-illustrator-skill",
+        "homepage": "",
+        "topics": [],
+        "updated_at": "2026-01-21"
+      },
+      "summary": {
+        "zh": "Document Illustrator 是基于 AI 智能分析的文档配图生成工具，支持多格式文档解析，内置渐变玻璃、票据、矢量插画三种专业风格，可生成 16:9 和 3:4 比例图片，适用于小红书、推特等社交媒体内容创作。",
+        "en": "Document Illustrator is an AI-powered tool that generates professional illustrations from documents. It supports multiple formats, three styles (gradient glass, ticket, vector), and outputs 16:9/3:4 images for social media like Xiaohongshu and Twitter.",
+        "tags_zh": [
+          "AI智能体",
+          "文档处理",
+          "配图生成"
+        ],
+        "tags_en": [
+          "AI 智能体",
+          "Document Processing",
+          "Illustration Generation"
+        ]
+      },
+      "pushed_at": "2026-01-21",
+      "updated_at": "2026-02-28"
+    },
+    "HKUDS/nanobot": {
+      "metadata": {
+        "full_name": "HKUDS/nanobot",
+        "name": "nanobot",
+        "owner": "HKUDS",
+        "description": "\"🐈 nanobot: The Ultra-Lightweight OpenClaw\"",
+        "stars": 26859,
+        "language": "Python",
+        "url": "https://github.com/HKUDS/nanobot",
+        "homepage": "",
+        "topics": [],
+        "updated_at": "2026-02-28"
+      },
+      "summary": {
+        "zh": "nanobot 是一款超轻量级个人 AI 助手，核心功能仅约 4,000 行代码，比 Clawdbot 缩小 99%。支持多平台通信（Slack、Discord、Feishu 等），集成 MCP 协议、多模态文件处理、会话记忆优化，具备高可靠性和扩展性，适用于构建轻量化智能代理系统。",
+        "en": "nanobot is an ultra-lightweight personal AI assistant with core agent functionality in ~4,000 lines of code—99% smaller than Clawdbot. It supports multi-channel communication (Slack, Discord, Feishu, etc.), integrates MCP protocol, multimodal file handling, and optimized session memory, offering high reliability and extensibility for lightweight AI agent deployment.",
+        "tags_zh": [
+          "AI智能体",
+          "多平台通信",
+          "轻量级架构"
+        ],
+        "tags_en": [
+          "AI 智能体",
+          "Lightweight Architecture",
+          "Multi-Channel Communication"
+        ]
+      },
+      "pushed_at": "2026-02-28",
+      "updated_at": "2026-02-28"
+    },
+    "NevaMind-AI/memU": {
+      "metadata": {
+        "full_name": "NevaMind-AI/memU",
+        "name": "memU",
+        "owner": "NevaMind-AI",
+        "description": "Memory for 24/7 proactive agents like openclaw (moltbot, clawdbot).",
+        "stars": 11627,
+        "language": "Python",
+        "url": "https://github.com/NevaMind-AI/memU",
+        "homepage": "https://memu.pro",
+        "topics": [
+          "agent-memory",
+          "agentic-workflow",
+          "claude",
+          "claude-skills",
+          "clawdbot",
+          "clawdbot-skill",
+          "mcp",
+          "memory",
+          "proactive",
+          "proactive-ai",
+          "sandbox",
+          "skills"
+        ],
+        "updated_at": "2026-02-24"
+      },
+      "summary": {
+        "zh": "memU 是一个专为 24/7 主动式 AI 代理设计的记忆框架，通过类文件系统结构组织记忆，显著降低 LLM 上下文成本，支持持续学习用户意图并主动响应，适用于长期运行的生产环境智能体。",
+        "en": "memU is a memory framework for 24/7 proactive AI agents, using a file-system-like structure to organize memory, drastically reducing LLM token costs by caching insights and enabling continuous, context-aware user intent understanding.",
+        "tags_zh": [
+          "AI智能体",
+          "成本优化",
+          "提示工程",
+          "长期记忆"
+        ],
+        "tags_en": [
+          "AI 智能体",
+          "Cost Optimization",
+          "Long-Term Memory",
+          "提示工程"
+        ]
+      },
+      "pushed_at": "2026-02-24",
+      "updated_at": "2026-02-28"
+    }
+  }
+}
