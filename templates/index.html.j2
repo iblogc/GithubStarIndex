@@ -1575,7 +1575,7 @@
             (item.topics || []).forEach(t => {
                 const span = document.createElement('span');
                 span.className = 'ui-tag topic-tag';
-                span.textContent = t.toUpperCase();
+                span.textContent = t;
                 topicsContainer.appendChild(span);
             });
 
@@ -1591,7 +1591,7 @@
                 span.className = 'ui-tag topic-tag';
                 span.style.borderColor = 'var(--accent)';
                 span.style.color = 'var(--accent)';
-                span.textContent = `#${t.toUpperCase()}`;
+                span.textContent = `#${t}`;
                 tagsContainer.appendChild(span);
             });
 
