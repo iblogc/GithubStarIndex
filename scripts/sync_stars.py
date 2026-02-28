@@ -301,7 +301,7 @@ class GitHubClient:
 
 # ── 标签治理配置 ──────────────────────────────────────────
 TAG_MAPPING = {
-    # 类别归口
+    # ── AI & 大模型 ──
     "LLM": "AI 大模型",
     "Large Language Model": "AI 大模型",
     "Agent": "AI 智能体",
@@ -311,8 +311,19 @@ TAG_MAPPING = {
     "Prompt Engineering": "提示工程",
     "LangChain": "LangChain 框架",
     "RAG": "RAG 检索增强",
+    "Stable Diffusion": "AI 图像生成",
+    "Image Generation": "AI 图像生成",
+    "Text-to-Image": "AI 图像生成",
+    "Computer Vision": "计算机视觉",
+    "NLP": "自然语言处理",
+    "Vector Database": "向量数据库",
+    "Fine-tuning": "模型微调",
+    "Quantization": "模型量化",
+    "Multi-modal": "多模态 AI",
+    "Deep Learning": "深度学习",
+    "Machine Learning": "机器学习",
     
-    # 技术栈归一化
+    # ── 技术栈归一化 ──
     "JS": "JavaScript",
     "TS": "TypeScript",
     "Golang": "Go",
@@ -320,9 +331,23 @@ TAG_MAPPING = {
     "Vuejs": "Vue.js",
     "Reactjs": "React",
     "Nextjs": "Next.js",
+    "Nuxtjs": "Nuxt.js",
+    "SvelteKit": "Svelte",
+    "TailwindCSS": "Tailwind CSS",
+    "Tailwind": "Tailwind CSS",
     "Tauri": "Tauri 框架",
+    "Flutter": "Flutter",
+    "ReactNative": "React Native",
+    "FastAPI": "FastAPI",
+    "Django": "Django",
+    "Flask": "Flask",
+    "SpringBoot": "Spring Boot",
+    "Postgres": "PostgreSQL",
+    "Redis": "Redis",
+    "MongoDB": "MongoDB",
+    "SQLite": "SQLite",
     
-    # 领域/场景
+    # ── 领域/场景 ──
     "Web Scraping": "网页爬虫",
     "Crawler": "网页爬虫",
     "Automation": "自动化工具",
@@ -331,6 +356,32 @@ TAG_MAPPING = {
     "Data Visualization": "数据可视化",
     "Knowledge Graph": "知识图谱",
     "Microservices": "微服务架构",
+    "Docker": "容器化",
+    "Kubernetes": "Kubernetes",
+    "K8s": "Kubernetes",
+    "Serverless": "无服务器",
+    "Cloud Computing": "云计算",
+    
+    # ── 平台与应用类型 ──
+    "Browser Extension": "浏览器插件",
+    "Chrome Extension": "浏览器插件",
+    "VS Code Extension": "VS Code 插件",
+    "Desktop App": "桌面应用",
+    "Mobile App": "移动端应用",
+    "CLI": "命令行工具",
+    "Terminal": "命令行工具",
+    "API": "开发者接口",
+    "SDK": "开发者 SDK",
+    
+    # ── 其它归口 ──
+    "Awesome": "精选资源",
+    "Tutorial": "技术教程",
+    "Library": "开发库",
+    "Framework": "核心框架",
+    "Boilerplate": "项目模板",
+    "Template": "项目模板",
+    "Privacy": "隐私安全",
+    "Self-hosted": "私有化部署",
 }
 
 # ════════════════════════════════════════════════════════════
