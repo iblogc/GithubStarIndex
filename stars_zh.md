@@ -1,6 +1,6 @@
 # ⭐ GitHub Stars Index
 
-> Updated: 2026-02-28 18:37 UTC · Total: 15
+> Updated: 2026-02-28 18:47 UTC · Total: 20
 
 ---
 
@@ -20,13 +20,18 @@
 - [[#lbjlaq/Antigravity-Manager|lbjlaq/Antigravity-Manager]]
 - [[#openmozi/openmozi|openmozi/openmozi]]
 - [[#nocmt/toMic|nocmt/toMic]]
+- [[#nolanzhao/creative_tools|nolanzhao/creative_tools]]
+- [[#antvis/Infographic|antvis/Infographic]]
+- [[#aresbit/MateBot|aresbit/MateBot]]
+- [[#workany-ai/workany|workany-ai/workany]]
+- [[#liu-ziting/ThinkFlowAI|liu-ziting/ThinkFlowAI]]
 
 ---
 
 ## waoowaooAI/waoowaoo
 
 > [!info]
-> ⭐ 3,488 · TypeScript · 2026-02-28  
+> ⭐ 3,497 · TypeScript · 2026-02-28  
 > [GitHub](https://github.com/waoowaooAI/waoowaoo)  
 > `#AI智能体` `#影视制作` `#自动化视频生成` 
 > waoowaoo AI 影视 Studio 是首家工业级全流程可控协作式专业AIagent影视生产平台，支持从小说文本自动生成分镜、角色、场景并制作成完整视频，涵盖短片到漫剧到真人级影视剧制作，采用好莱坞专业制作团队思路，提供虚拟制片场体验。
@@ -56,7 +61,7 @@
 ## HKUDS/nanobot
 
 > [!info]
-> ⭐ 26,861 · Python · 2026-02-28  
+> ⭐ 26,863 · Python · 2026-02-28  
 > [GitHub](https://github.com/HKUDS/nanobot)  
 > `#AI智能体` `#多平台通信` `#轻量级架构` 
 > nanobot 是一款超轻量级个人 AI 助手，核心功能仅约 4,000 行代码，比 Clawdbot 缩小 99%。支持多平台通信（Slack、Discord、Feishu 等），集成 MCP 协议、多模态文件处理、会话记忆优化，具备高可靠性和扩展性，适用于构建轻量化智能代理系统。
@@ -66,7 +71,7 @@
 ## NevaMind-AI/memU
 
 > [!info]
-> ⭐ 11,629 · Python · 2026-02-24  
+> ⭐ 11,631 · Python · 2026-02-24  
 > [GitHub](https://github.com/NevaMind-AI/memU) · [Website](https://memu.pro)  
 > `#AI智能体` `#成本优化` `#提示工程` `#长期记忆` `#agent-memory` `#agentic-workflow` `#claude` `#claude-skills` `#clawdbot` `#clawdbot-skill` `#mcp` `#memory` `#proactive` `#proactive-ai` `#sandbox` `#skills` 
 > memU 是一个专为 24/7 主动式 AI 代理设计的记忆框架，通过类文件系统结构组织记忆，显著降低 LLM 上下文成本，支持持续学习用户意图并主动响应，适用于长期运行的生产环境智能体。
@@ -76,7 +81,7 @@
 ## linshenkx/prompt-optimizer
 
 > [!info]
-> ⭐ 22,381 · TypeScript · 2026-02-10  
+> ⭐ 22,380 · TypeScript · 2026-02-10  
 > [GitHub](https://github.com/linshenkx/prompt-optimizer) · [Website](https://prompt.always200.com)  
 > `#AI智能体` `#Chrome插件` `#多模型集成` `#提示工程` `#llm` `#prompt` `#prompt-engineering` `#prompt-optimization` `#prompt-toolkit` `#prompt-tuning` 
 > Prompt Optimizer 是一款专业的AI提示词优化工具，支持多轮迭代优化、双模式提示词编辑、实时对比测试及多模型集成（OpenAI/Gemini/DeepSeek等），涵盖文生图、图生图及MCP协议支持，提供Web/桌面/Chrome插件/Docker四种部署方式，纯前端架构保障数据安全。
@@ -96,7 +101,7 @@
 ## farion1231/cc-switch
 
 > [!info]
-> ⭐ 21,766 · TypeScript · 2026-02-28  
+> ⭐ 21,769 · TypeScript · 2026-02-28  
 > [GitHub](https://github.com/farion1231/cc-switch) · [Website](https://github.com/farion1231/cc-switch)  
 > `#AI智能体` `#Tauri 框架` `#跨平台桌面应用` `#ai-tools` `#claude-code` `#codex` `#desktop-app` `#kimi-k2-thiking` `#mcp` `#minimax` `#open-source` `#opencode` `#provider-management` `#rust` `#skills` `#skills-management` `#tauri` `#typescript` `#wsl-support` 
 > 跨平台桌面端一体化AI编程助手，支持Claude Code、Codex及Gemini CLI的统一管理，基于Tauri 2构建，提供高效、低成本的AI代码开发体验，集成API中继服务与专属优惠。
@@ -106,7 +111,7 @@
 ## affaan-m/everything-claude-code
 
 > [!info]
-> ⭐ 54,711 · JavaScript · 2026-02-28  
+> ⭐ 54,712 · JavaScript · 2026-02-28  
 > [GitHub](https://github.com/affaan-m/everything-claude-code) · [Website](https://ecc.tools)  
 > `#AI智能体` `#性能优化` `#生产级配置` `#ai-agents` `#anthropic` `#claude` `#claude-code` `#developer-tools` `#llm` `#mcp` `#productivity` 
 > Everything Claude Code 是一个为 AI 智能体性能优化设计的完整系统，涵盖技能、直觉、内存、安全和研究优先的开发流程。基于 Anthropic 黑客松获奖项目，支持 Claude Code、Codex、Cowork 等主流智能体框架，提供生产级配置、钩子、命令、规则及 MCP 集成，实现跨会话记忆持久化、自动技能提取与并行化开发。
@@ -145,7 +150,7 @@
 ## lbjlaq/Antigravity-Manager
 
 > [!info]
-> ⭐ 24,788 · Rust · 2026-02-27  
+> ⭐ 24,790 · Rust · 2026-02-27  
 > [GitHub](https://github.com/lbjlaq/Antigravity-Manager) · [Website](https://lbjlaq.github.io/Antigravity-Manager/)  
 > `#AI智能体` `#协议代理` `#账号管理` `#account-manager` `#antigravity` 
 > Antigravity-Manager 是一款专业的 AI 账号管理与协议代理系统，基于 Tauri v2 + React 和 Rust 构建。它提供一键无缝账号切换、多协议适配（OpenAI/Anthropic/Gemini）、智能配额监控与自动重试机制，支持 OAuth 2.0 授权、模型路由分级及高达 100MB 的多模态请求处理，是开发者构建本地 AI 中转站的理想工具。
@@ -170,5 +175,55 @@
 > `#局域网传输` `#虚拟麦克风` `#音频处理` 
 > ToMic 是一款基于 Web 技术的局域网虚拟麦克风工具，可将手机浏览器作为电脑麦克风输入源，通过 Wi-Fi 传输音频并利用虚拟声卡（如 BlackHole/VB-CABLE）注入系统。支持零安装、低延迟传输、HTTPS 安全连接，并集成 SoX 实现智能音频路由，适用于 Zoom、Teams 等会议场景。
 > <sub>ToMic - Turn Your Phone into a PC Microphone</sub>
+
+---
+## nolanzhao/creative_tools
+
+> [!info]
+> ⭐ 72 · TypeScript · 2026-02-02  
+> [GitHub](https://github.com/nolanzhao/creative_tools)  
+> `#AI智能体` `#Gemini API` `#漫画生成` `#短视频创作` 
+> 基于 Gemini Nano Banano 和 VEO 的 AI 驱动短视频与漫画创作工具，支持剧本导入、AI 生成分镜图片与视频、角色一致性管理及多项目协作，提供画布视图与历史版本管理，适用于内容创作者快速生成视觉叙事作品。
+> <sub>使用 Gemini (Nano Banano 和 Veo) 的短视频和漫画创作工具</sub>
+
+---
+## antvis/Infographic
+
+> [!info]
+> ⭐ 4,513 · TypeScript · 2026-02-28  
+> [GitHub](https://github.com/antvis/Infographic) · [Website](https://infographic.antv.vision)  
+> `#AI智能体` `#信息图生成` `#数据可视化` `#ai` `#antv` `#infographic` `#llm` `#visualization` 
+> AntV Infographic 是蚂蚁集团 AntV 团队推出的下一代声明式信息图可视化引擎，提供专为 AI 优化的配置语法和约 200 个内置模板组件。支持 AI 友好提示词生成、流式渲染输出，具备主题系统、SVG 渲染、内置编辑器等功能，可快速创建高质量信息图，提升数据叙事效率。
+> <sub>🦋 An Infographic Generation and Rendering Framework, bring words to life with AI!</sub>
+
+---
+## aresbit/MateBot
+
+> [!info]
+> ⭐ 38 · JavaScript · 2026-02-27  
+> [GitHub](https://github.com/aresbit/MateBot)  
+> `#AI智能体` `#Python` `#自动化工具` `#远程协作` 
+> MateCode 是一个通过 Telegram 远程控制 Claude Code 的桥接工具，支持长期记忆、会话管理、代码高亮等功能。采用纯 Python 标准库开发，使用长轮询实现低延迟通信，所有数据本地存储保障隐私安全。
+> <sub>claudeclaw</sub>
+
+---
+## workany-ai/workany
+
+> [!info]
+> ⭐ 1,285 · TypeScript · 2026-02-25  
+> [GitHub](https://github.com/workany-ai/workany) · [Website](https://workany.ai)  
+> `#AI智能体` `#Claude Agent SDK` `#桌面应用` `#ai-assistant` `#desktop-agent` `#general-agent` `#open-cowork` 
+> WorkAny 是一款桌面级 AI 智能体应用，通过自然语言指令执行复杂任务，支持实时代码生成、多模态文件处理（文档/网页/表格/幻灯片）、沙箱环境执行及 MCP 协议集成，基于 Claude Agent SDK 构建，提供跨平台桌面端体验。
+> <sub>Desktop Agent for Any Task</sub>
+
+---
+## liu-ziting/ThinkFlowAI
+
+> [!info]
+> ⭐ 141 · Vue · 2026-02-06  
+> [GitHub](https://github.com/liu-ziting/ThinkFlowAI) · [Website](https://thinkflow-ai.lz-t.top)  
+> `#AI智能体` `#提示工程` `#知识图谱` `#ai` `#flow` `#gpt` `#thinkflow` `#web` 
+> ThinkFlow AI 是一个基于 Vue 3 和 AI 的轻量级工作台，可将核心想法自动扩展为交互式知识图谱，支持节点追问、深度解析与配图生成，实现从抽象概念到结构化思维网络的智能转化。
+> <sub>ThinkFlow AI 是一个轻量级“从想法到结构化图谱”的工作台：输入一个核心想法，应用会把它扩展为可浏览的知识图谱（模块/子模块）。每个节点支持继续追问扩展、深挖详情，以及可选的配图生成。</sub>
 
 ---
