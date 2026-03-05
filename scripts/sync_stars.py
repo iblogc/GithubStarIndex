@@ -566,6 +566,7 @@ def main():
 
     log.info("GitHub Stars Index同步系统开始运行")
     cfg = load_config()
+    gh = GitHubClient(cfg["github"]["username"], cfg["github"].get("token"))
 
     store = DataStore(STARS_JSON_PATH)
     generator = TemplateGenerator(TEMPLATES_DIR)
@@ -593,7 +594,6 @@ def main():
             reverse=True,
         )
     else:
-        gh = GitHubClient(cfg["github"]["username"], cfg["github"].get("token"))
         ai = AISummarizer(
             cfg["ai"]["base_url"],
             cfg["ai"]["api_key"],
