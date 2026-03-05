@@ -53,17 +53,23 @@ jobs:
       - name: 安装依赖
         run: pip install -r requirements.txt
 
-      # ── 4.1 从 gh-pages 恢复上次数据（用于增量处理） ─────────────
-      - name: 从 gh-pages 恢复 stars.json（如存在）
+      # ── 4.1 准备 stars.json（优先 gh-pages，回退 main） ───────────
+      - name: 准备 stars.json（gh-pages -> main fallback）
+        id: seed_stars
         run: |
           set -e
           mkdir -p data
           git fetch origin gh-pages --depth=1 || true
           if git show origin/gh-pages:data/stars.json > data/stars.json 2>/dev/null; then
             echo "✅ 已从 gh-pages 恢复 data/stars.json"
+            echo "source=gh-pages" >> "$GITHUB_OUTPUT"
+          elif [ -f data/stars.json ]; then
+            echo "✅ 使用 main 分支现有 data/stars.json（首次迁移）"
+            echo "source=main" >> "$GITHUB_OUTPUT"
           else
-            echo "ℹ️ gh-pages 上暂无 data/stars.json，将从空数据开始"
+            echo "ℹ️ 未找到可复用 stars.json，将从空数据开始"
             rm -f data/stars.json
+            echo "source=none" >> "$GITHUB_OUTPUT"
           fi
 
       # ── 4. 可选：强制重置数据集 ──────────────────────
@@ -73,8 +79,31 @@ jobs:
           echo "⚠️ 强制重建模式：删除现有数据"
           rm -rf data/stars.json
 
-      # ── 5. 执行同步脚本 ───────────────────────────────────
+      # ── 5a. 首次迁移（main -> gh-pages）：仅渲染，避免重新抓取 ───
+      - name: 首次迁移仅渲染（不抓取）
+        if: steps.seed_stars.outputs.source == 'main'
+        env:
+          # ── Secrets（机密，加密保存）──
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}    # Actions 自动注入，无需手动添加
+          AI_API_KEY: ${{ secrets.AI_API_KEY }}        # AI API Key
+          VAULT_PAT: ${{ secrets.VAULT_PAT }}          # Vault 仓库写权限 PAT（Vault 同步时必填）
+
+          # ── Variables（非机密，明文，在 Settings → Variables 中配置）──
+          GH_USERNAME: ${{ vars.GH_USERNAME }}         # 要抓取 Stars 的 GitHub 用户名
+          AI_BASE_URL: ${{ vars.AI_BASE_URL }}         # AI 接口地址
+          AI_MODEL: ${{ vars.AI_MODEL }}
+          MAX_CONCURRENCY: ${{ vars.MAX_CONCURRENCY }}
+          OUTPUT_FILENAME: ${{ vars.OUTPUT_FILENAME }}
+          VAULT_SYNC_ENABLED: ${{ vars.VAULT_SYNC_ENABLED }}
+          VAULT_REPO: ${{ vars.VAULT_REPO }}
+          VAULT_SYNC_PATH: ${{ vars.VAULT_SYNC_PATH }}
+          TEST_LIMIT: ${{ github.event.inputs.test_limit }}
+          PAGES_SYNC_ENABLED: ${{ vars.PAGES_SYNC_ENABLED }}
+        run: python scripts/sync_stars.py --render-only
+
+      # ── 5b. 常规模式：正常同步（增量抓取） ─────────────────────
       - name: 同步 GitHub Stars
+        if: steps.seed_stars.outputs.source != 'main'
         env:
           # ── Secrets（机密，加密保存）──
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}    # Actions 自动注入，无需手动添加

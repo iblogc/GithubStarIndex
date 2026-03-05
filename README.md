@@ -18,7 +18,7 @@
 - 📝 为每个仓库读取 README，调用 AI 生成内容摘要和技术标签
 - 🏷️ **标签智能治理**：内置 `TAG_MAPPING` 映射库，自动合并同义词、归一化技术栈（如 LLM -> AI 大模型），拒绝标签爆炸（可能效果也不好）
 - ⚡️ **高效率**：支持**并发调用** AI 接口，大幅提升处理大量新项目时的速度
-- 🗃️ **数据驱动**：所有信息存储为 `data/stars.json`，支持二次开发
+- 🗃️ **数据驱动**：运行时使用 `data/stars.json`，发布到 `gh-pages/data/stars.json`，支持二次开发
 - 🎨 **模版驱动**：使用 Jinja2 模版生成 Markdown 和 HTML 静态页面
 - ⏭️ **智能增量**：新项目调用 AI 总结，旧项目**自动同步最新的 Star 数和元数据**
 - ⏰ GitHub Actions **定时自动运行**，cron 表达式自由配置
@@ -172,6 +172,12 @@ schedule:
 2. 运行一次 Action 后，进入 **Settings -> Pages**。
 3. **Branch** 选择 `gh-pages`，目录选择 `/(root)`，保存。
 
+> [!IMPORTANT]
+> **数据源迁移说明（兼容 Fork）**：
+> - 当前推荐的数据源为 `gh-pages/data/stars.json`。
+> - `main` 分支中的 `data/stars.json` 仅用于首次迁移兼容（例如 Fork 后第一次运行 Action 的回退读取）。
+> - 常规运行不会再把 `data/stars.json` 提交回 `main`。
+
 ---
 
 ## Docker 部署
@@ -245,7 +251,7 @@ python scripts/sync_stars.py --render-only
 
 | 文件                         | 说明                                 |
 | :--------------------------- | :----------------------------------- |
-| `data/stars.json`            | **核心数据集**（抓取的全量项目数据） |
+| `data/stars.json`            | 运行时临时数据文件（兼容迁移入口）   |
 | `templates/`                 | Jinja2 生成模版（Markdown/HTML）     |
 | `dist/`                      | 自动生成的本地成品（HTML / MD）      |
 | `scripts/sync_stars.py`      | 核心同步与生成脚本                   |
@@ -270,4 +276,3 @@ python scripts/sync_stars.py --render-only
 
 > [!TIP]
 > 如果你也开启了 **Obsidian 同步 (Vault Sync)**，可以直接复用具有写入权限的 `VAULT_PAT` 作为 `GH_TOKEN`。
-
